@@ -1,0 +1,17 @@
+[package]
+name = "testlib"
+version = "0.1.0"
+authors = ["Krzysztof Lesiak"]
+edition = "2018"
+
+[dependencies]
+libc = { version = "0.2", default-features = false }
+
+[lib]
+crate-type=["cdylib"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
